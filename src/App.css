@@ -44,3 +44,47 @@
     transform: rotate(360deg);
   }
 }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.flex-item {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.flex-item.qualified {
+  background-color: #d4edda; /* Green for qualified */
+}
+
+.flex-item.not-qualified {
+  background-color: #f8d7da; /* Red for not qualified */
+}
+
+.flex-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 1rem; /* Space between grid items */
+  margin-top: 2rem;
+  width: 100%; /* Ensure it spans the full width */
+}
+
+.grid-item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}

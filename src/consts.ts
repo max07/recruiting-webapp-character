@@ -1,5 +1,3 @@
-import type { Attributes, Class } from "./types";
-
 export const ATTRIBUTE_LIST = [
     'Strength',
     'Dexterity',
@@ -9,32 +7,14 @@ export const ATTRIBUTE_LIST = [
     'Charisma',
 ];
 
-export const CLASS_LIST: Record<Class, Attributes> = {
-    'Barbarian': {
-        'Strength': 14,
-        'Dexterity': 9,
-        'Constitution': 9,
-        'Intelligence': 9,
-        'Wisdom': 9,
-        'Charisma': 9,
-    },
-    'Wizard': {
-        'Strength': 9,
-        'Dexterity': 9,
-        'Constitution': 9,
-        'Intelligence': 14,
-        'Wisdom': 9,
-        'Charisma': 9,
-    },
-    'Bard': {
-        'Strength': 9,
-        'Dexterity': 9,
-        'Constitution': 9,
-        'Intelligence': 9,
-        'Wisdom': 9,
-        'Charisma': 14,
-    },
-}
+export const CLASS_LIST = [
+    { name: "Barbarian", requirements: { Strength: 12, Constitution: 12 } },
+    { name: "Bard", requirements: { Charisma: 12, Dexterity: 10 } },
+    { name: "Cleric", requirements: { Wisdom: 12, Constitution: 10 } },
+    { name: "Fighter", requirements: { Strength: 12, Constitution: 10 } },
+    { name: "Rogue", requirements: { Dexterity: 12 } },
+    { name: "Wizard", requirements: { Intelligence: 13 } },
+  ];
 
 export const SKILL_LIST = [
     { name: 'Acrobatics', attributeModifier: 'Dexterity' },
